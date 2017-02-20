@@ -12,10 +12,10 @@ Data extraction from ethpool.org
 ## Configuration
 Configuration can be changed via src/main/resources/application.yml:
 
-+ spring.datasource - database configurations
-+ spring.jpa.properties.hibernate.dialect - dialect to be used by Hibernate (default: PostgreSQL9Dialect). Adjust when changing database.
-+ rest.url - url of the REST API of ethpool.org (do not change!)
-+ logging - logging configuration (filepath, loglevel,...)
++ ```spring.datasource``` - database configurations
++ ```spring.jpa.properties.hibernate.dialect``` - dialect to be used by Hibernate (default: PostgreSQL9Dialect). Adjust when changing database.
++ ```rest.url``` - url of the REST API of ethpool.org (do not change!)
++ ```logging``` - logging configuration (filepath, loglevel,...)
 
 ## Technology Stack
 Language: Java 8
