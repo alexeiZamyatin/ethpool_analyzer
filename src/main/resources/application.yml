@@ -1,0 +1,31 @@
+spring:
+  freemarker:
+    checkTemplateLocation: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ethpool
+    username: ethpool
+    password: 9cc8dd8e3949af2eab83e2930448909d8a3a327a310b7931d0ee10f08dc18cb0
+  jpa:
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      ddl-auto: update
+      jdbc.batch_size: 100
+      ordered_inserts: true
+      ordered_updates: true
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQL9Dialect
+      hibernate.batch_size: 100
+      ordered_inserts: true
+      ordered_updates: true
+
+rest:
+  url: http://ethpool.org/api
+
+
+logging:
+  path: /var/log
+  file: ethpool.log
+  level:
+    root: INFO
+    org.springframwork.web: ERROR
+    org.hibernate: ERROR
