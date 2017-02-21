@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 public class MinerCreditInfo {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_minercreditinfo_id")
     @SequenceGenerator(initialValue = 1, name = "seq_minercreditinfo_id", sequenceName = "seq_minercreditinfo_id")
@@ -19,6 +20,16 @@ public class MinerCreditInfo {
     private float erstimatedTtnb;
 
     private long credit;
+
+    private long timestamp;
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public Long getId() {
         return id;

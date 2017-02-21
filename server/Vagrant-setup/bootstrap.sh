@@ -1,14 +1,14 @@
 #!/bin/sh -e
 
 # Edit the following to change the name of the database user that will be created:
-APP_DB_USER=ethpool
-APP_DB_PASS=9cc8dd8e3949af2eab83e2930448909d8a3a327a310b7931d0ee10f08dc18cb0
+APP_DB_USER=az2416
+APP_DB_PASS=06RGofdF6l
 
 # Edit the following to change the name of the database that is created (defaults to the user name)
-APP_DB_NAME=ethpool
+APP_DB_NAME=az2416
 
 # Edit the following to change the version of PostgreSQL that is installed
-PG_VERSION=9.5
+PG_VERSION=9.2
 
 ###########################################################
 # Changes below this line are probably not necessary
@@ -96,7 +96,7 @@ cat << EOF | su - postgres -c psql
 CREATE USER $APP_DB_USER WITH PASSWORD '$APP_DB_PASS';
 
 -- Create the database:
-CREATE DATABASE ncanalyzer WITH OWNER=$APP_DB_USER
+CREATE DATABASE $APP_DB_NAME WITH OWNER=$APP_DB_USER
                                   LC_COLLATE='en_US.utf8'
                                   LC_CTYPE='en_US.utf8'
                                   ENCODING='UTF8'

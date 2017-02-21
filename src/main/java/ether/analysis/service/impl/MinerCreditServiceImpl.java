@@ -4,7 +4,9 @@ import ether.analysis.model.MinerCreditInfo;
 import ether.analysis.repository.MinerCreditInfoRepository;
 import ether.analysis.service.MinerCreditInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,6 +20,7 @@ public class MinerCreditServiceImpl implements MinerCreditInfoService {
     private MinerCreditInfoRepository repository;
 
     @Override
+    @Transactional
     public MinerCreditInfo create(MinerCreditInfo minerCreditInfo) {
         return repository.save(minerCreditInfo);
     }
