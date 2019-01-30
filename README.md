@@ -1,3 +1,4 @@
+**This repo is no longer maintained - use at your own risk (API probably outdated)**
 # ethpool_analyzer
 Data extraction from ethpool.org
 
